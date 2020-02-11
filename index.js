@@ -262,7 +262,7 @@ ZWayServerPlatform.prototype = {
             "sensorBinary.alarm_smoke",
             "sensorBinary.Door/Window",
             "sensorBinary.alarm_door",
-            "sensorBinary.alarmSensor_flood",
+            "sensorBinary.alarm_flood",
 
             // | Possible regression, this couldn't become a primary before, but it's needed for some LeakSensors...
             // v But now a "sensorBinary.General purpose" can become primary... Bug or Feature?
@@ -578,7 +578,7 @@ ZWayServerAccessory.prototype = {
                     services.push(new Service.ContactSensor(vdev.metrics.title, vdev.id));
                 }
                 break;
-            case "sensorBinary.alarmSensor_flood":
+            case "sensorBinary.alarm_flood":
                 services.push(new Service.LeakSensor(vdev.metrics.title, vdev.id));
                 break;
             case "doorlock":
@@ -640,7 +640,7 @@ ZWayServerAccessory.prototype = {
             map[(new Characteristic.CurrentDoorState).UUID] = ["sensorBinary.Door/Window","sensorBinary"];
             map[(new Characteristic.TargetDoorState).UUID] = ["sensorBinary.Door/Window","sensorBinary"]; //TODO: Always a fixed result
             map[(new Characteristic.ContactSensorState).UUID] = ["sensorBinary","sensorBinary.Door/Window"]; //NOTE: A root before a full...what we want?
-            map[(new Characteristic.LeakDetected).UUID] = ["sensorBinary.alarmSensor_flood","sensorBinary.General purpose","sensorBinary"];
+            map[(new Characteristic.LeakDetected).UUID] = ["sensorBinary.alarm_flood","sensorBinary.General purpose","sensorBinary"];
             map[(new Characteristic.CurrentPosition).UUID] = ["sensorBinary.Door/Window","switchMultilevel.blind","switchBinary.motor","sensorBinary","switchMultilevel","switchBinary"]; // NOTE: switchBinary.motor may not exist...guessing?
             map[(new Characteristic.TargetPosition).UUID] = ["sensorBinary.Door/Window","switchMultilevel.blind","switchBinary.motor","sensorBinary","switchMultilevel","switchBinary"]; // NOTE: switchBinary.motor may not exist...guessing?
             map[(new Characteristic.PositionState).UUID] = ["sensorBinary.Door/Window","switchMultilevel.blind","switchBinary.motor","sensorBinary","switchMultilevel","switchBinary"]; // NOTE: switchBinary.motor may not exist...guessing?
