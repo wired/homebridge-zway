@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SphtKr/homebridge-zway.git"
+    "url": "git+https://github.com/palasinio/homebridge-zway.git"
   },
   "preferGlobal": true,
   "keywords": [
@@ -19,18 +19,18 @@
     "HomeKit"
   ],
   "engines": {
-    "node": ">=0.12.0",
-    "homebridge": ">=0.2.5"
+    "node": ">=8.0.0",
+    "homebridge": ">=0.4.46"
   },
   "dependencies": {
-    "request": "2.74.0",
-    "q": "1.4.x",
-    "debug": "^2.2.0",
-    "tough-cookie": "^2.2.0"
+    "request": "^2.88.2",
+    "q": "^2.0.3",
+    "debug": "^4.1.1",
+    "tough-cookie": "^3.0.1"
   },
   "devDependencies": {
-    "qunit": "^0.9.1",
-    "homebridge": ">=0.2.5",
+    "qunit": "^2.9.3",
+    "homebridge": ">=0.4.46",
     "istanbul": ">=0.4.5"
   },
   "author": "S'pht'Kr <fthasphtkr@gmail.com> (https://github.com/SphtKr)",
