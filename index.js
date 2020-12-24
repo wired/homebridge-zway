@@ -527,13 +527,12 @@ ZWayServerAccessory.prototype = {
                     services.push(new Service.Outlet(vdev.metrics.title, vdev.id));
                 } else if(this.platform.getTagValue(vdev, "Service.Type") === "WindowCovering"){
                     services.push(new Service.WindowCovering(vdev.metrics.title, vdev.id));
-				} else if(this.platform.getTagValue(vdev, "Service.Type") === "Valve"){
-                    var valveSvc = new Service.Valve(vdev.metrics.title, vdev.id);
-                    valveSvc.getCharacteristic(Characteristic.ValveType).value = Characteristic.ValveType.GENERIC_VALVE;
-                    services.push(valveSvc);
                 } else {
                     services.push(new Service.Switch(vdev.metrics.title, vdev.id));
                 }
+                break;
+            case "switchBinary.switch":
+                services.push(new Service.Switch(vdev.metrics.title, vdev.id));
                 break;
             case "switchRGBW":
             case "switchMultilevel":
