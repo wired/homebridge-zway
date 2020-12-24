@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-zway",
+  "name": "homebridge-zway-lopify",
   "version": "0.6.0-alpha0",
   "description": "homebridge-plugin for ZWay Server. Updated to support Heating Thermostats on iOS 13.",
   "main": "index.js",
