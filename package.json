@@ -1,14 +1,14 @@
 {
   "name": "homebridge-zway",
   "version": "0.6.0-alpha0",
-  "description": "homebridge-plugin for ZWay Server and RaZBerry",
+  "description": "homebridge-plugin for ZWay Server. Updated to support Heating Thermostats on iOS 13.",
   "main": "index.js",
   "scripts": {
     "test": "node tests/js/runner.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/palasinio/homebridge-zway.git"
+    "url": "git+https://github.com/lopify/homebridge-zway.git"
   },
   "preferGlobal": true,
   "keywords": [
@@ -33,10 +33,10 @@
     "homebridge": ">=0.4.46",
     "istanbul": ">=0.4.5"
   },
-  "author": "S'pht'Kr <fthasphtkr@gmail.com> (https://github.com/SphtKr)",
+  "author": "Lopify (https://github.com/lopify)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SphtKr/homebridge-zway/issues"
+    "url": "https://github.com/lopify/homebridge-zway/issues"
   },
-  "homepage": "https://github.com/SphtKr/homebridge-zway#readme"
+  "homepage": "https://github.com/lopify/homebridge-zway#readme"
 }
