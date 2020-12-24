@@ -1089,10 +1089,21 @@ ZWayServerAccessory.prototype = {
             // Hmm... apparently if this is not setable, we can't add a thermostat change to a scene. So, make it writable but a no-op.
             cx.on('set', interlock(function(newValue, callback){
 
-                this.zWaveAPIRun(vdev, "ThermostatMode.Set(" + newValue + ")").then(function(result){
-                    callback(false, parseInt(newValue) == 0 ? Characteristic.CurrentHeatingCoolingState.Off
-                        : Characteristic.CurrentHeatingCoolingState.HEAT);
-                });
+                // this.zWaveAPIRun(vdev, "ThermostatMode.Set(" + newValue + ")").then(function(result){
+                //     callback(false, parseInt(newValue) == 0 ? Characteristic.CurrentHeatingCoolingState.Off
+                //         : Characteristic.CurrentHeatingCoolingState.HEAT);
+                // });
+
+                // If turns off the thermostat it just set it to 5 degrees
+
+                if (parseInt(newValue) == 0) {
+                    this.zWaveAPIRun(vdev, "ThermostatSetPoint.Set(1,5)").then(function(result){
+                        callback(false, Characteristic.CurrentHeatingCoolingState.Off);
+                    });
+                } else {
+                    callback(false, Characteristic.CurrentHeatingCoolingState.HEAT);
+                }
+                
 
             }.bind(this)));
 
