@@ -1,6 +1,6 @@
 {
   "name": "homebridge-zway-wired",
-  "version": "0.6.0-alpha1",
+  "version": "0.6.1",
   "description": "homebridge-plugin for ZWay Server. wired's fork.",
   "main": "index.js",
   "scripts": {
