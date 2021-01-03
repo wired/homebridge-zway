@@ -1,12 +1,14 @@
 # homebridge-zway
 
-- Updated to support Heating Thermostats on iOS 13 
+- wired's fork of Homebridge-zway
+- primarily used w/ Home Assistant
+- expect fixes for random stuff I encounter
 
 Homebridge module for [Z-Way Server](http://razberry.z-wave.me/index.php?id=24).
 
 This platform lets you bridge a Z-Way Server instance (for example, running on [RaZBerry](http://razberry.z-wave.me) hardware or with a [UZB1](http://www.z-wave.me/index.php?id=28)) to HomeKit using Homebridge.
 
-Homebridge requires Z-Way Server version 2.0.1 or greater. It is currently tested against 2.2 though it is expected to still work with 2.0.1.
+Tested with Z-Way Server 3.1.
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 

@@ -1,14 +1,14 @@
 {
-  "name": "homebridge-zway-lopify",
+  "name": "homebridge-zway-wired",
   "version": "0.6.0-alpha1",
-  "description": "homebridge-plugin for ZWay Server. Updated to support Heating Thermostats on iOS 13.",
+  "description": "homebridge-plugin for ZWay Server. wired's fork.",
   "main": "index.js",
   "scripts": {
     "test": "node tests/js/runner.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lopify/homebridge-zway.git"
+    "url": "git+https://github.com/wired/homebridge-zway.git"
   },
   "preferGlobal": true,
   "keywords": [
@@ -33,10 +33,10 @@
     "homebridge": ">=0.4.46",
     "istanbul": ">=0.4.5"
   },
-  "author": "Lopify (https://github.com/lopify)",
+  "author": "wired (https://github.com/wired)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lopify/homebridge-zway/issues"
+    "url": "https://github.com/wired/homebridge-zway/issues"
   },
-  "homepage": "https://github.com/lopify/homebridge-zway#readme"
+  "homepage": "https://github.com/wired/homebridge-zway#readme"
 }
