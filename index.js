@@ -580,6 +580,7 @@ ZWayServerAccessory.prototype = {
                 break;
             case "sensorBinary":
             case "sensorBinary.General purpose":
+            case "sensorBinary.Motion":
                 var stype = this.platform.getTagValue(vdev, "Service.Type");
                 if(stype === "MotionSensor"){
                     services.push(new Service.MotionSensor(vdev.metrics.title, vdev.id));
